@@ -1,0 +1,12 @@
+version: 0.0
+os: linux
+files:
+  - source: simple_app.sh
+    destination: /home/ec2-user
+
+hooks:
+  BeforeInstall:
+    - location: scripts/B4Inst.py
+      timeout: 300
+      runas: root
+
